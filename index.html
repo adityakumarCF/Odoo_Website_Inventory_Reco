@@ -6,7 +6,7 @@
   <meta http-equiv="Expires" content="0">
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Reco Dashboard V19 — Odoo vs Website Inventory Reco</title>
+<title>Reco Dashboard — Odoo vs Website Inventory Reco</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Montserrat:wght@400;500&display=swap" rel="stylesheet"/>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
@@ -717,7 +717,8 @@ function buildDodGapChart() {
         },
         tooltip:{callbacks:{label:ctx=>' Gap: '+(ctx.parsed.y>0?'+':'')+ctx.parsed.y}}
       },
-      layout:{padding:{top:28,bottom:20}},
+      clip:false,
+      layout:{padding:{top:28,bottom:20,left:10,right:40}},
       scales:{
         x:{grid:{display:false},ticks:{font:{family:'Montserrat',size:10},color:'#888'}},
         y:{grid:{color:gc()},ticks:{font:{family:'Montserrat',size:10},color:'#888'},
